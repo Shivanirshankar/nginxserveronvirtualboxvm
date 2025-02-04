@@ -13,13 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install SSH Key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 192.168.56.101 >> ~/.ssh/known_hosts  # Replace with VM's IP
-
       - name: Install NGINX on VirtualBox VM
         run: |
           ssh ubuntu@192.168.56.101 << 'EOF'
