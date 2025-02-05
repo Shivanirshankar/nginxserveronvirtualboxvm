@@ -3,7 +3,7 @@ name: Deploy NGINX to VirtualBox VM
 on:
   push:
     branches:
-      - main  # Trigger on push to main branch
+      - main
 
 jobs:
   deploy:
@@ -13,15 +13,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install NGINX on VirtualBox VM
+      - name: Setup SSH Access
         run: |
-          ssh ubuntu@192.168.56.101 << 'EOF'
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 192.168.56.10 >> ~/.ssh/known_hosts
+
+      - name: Install & Configure NGINX on VirtualBox VM
+        run: |
+          ssh vagrant@192.168.56.10 << 'EOF'
           sudo apt update -y
           sudo apt install -y nginx
-          sudo systemctl start nginx
-          sudo systemctl enable nginx
-          echo "<h1>Hello from GitHub Actions NGINX!</h1>" | sudo tee /var/www/html/index.html
+          echo "<h1>Deployed via GitHub Actions!</h1>" | sudo tee /var/www/html/index.html
+          sudo systemctl restart nginx
           EOF
 
       - name: Verify Deployment
-        run: curl -I http://192.168.56.101
+        run: curl -I http://192.168.56.10
