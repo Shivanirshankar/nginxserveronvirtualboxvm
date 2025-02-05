@@ -16,13 +16,13 @@ jobs:
       - name: Setup SSH Access
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 192.168.56.10 >> ~/.ssh/known_hosts
 
       - name: Install & Configure NGINX on VirtualBox VM
         run: |
-          ssh vagrant@192.168.56.10 << 'EOF'
+          ssh -o StrictHostKeyChecking=no vagrant@192.168.56.10 << 'EOF'
           sudo apt update -y
           sudo apt install -y nginx
           echo "<h1>Deployed via GitHub Actions!</h1>" | sudo tee /var/www/html/index.html
