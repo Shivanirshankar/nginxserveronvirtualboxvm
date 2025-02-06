@@ -17,7 +17,7 @@ jobs:
         run: vagrant up
         shell: cmd  # Run in Windows CMD to avoid PowerShell script issues
 
-      - name: List Running VMs
+      - name: List Running VMs #list vm's
         run: vagrant status
         shell: cmd
 
