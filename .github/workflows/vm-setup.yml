@@ -1,0 +1,26 @@
+name: VirtualBox NGINX Deployment
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual execution
+
+jobs:
+  deploy-nginx-vm:
+    runs-on: self-hosted  # Runs on your local Windows machine
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Start Virtual Machine
+        run: vagrant up
+        shell: cmd  # Run in Windows CMD to avoid PowerShell script issues
+
+      - name: List Running VMs
+        run: vagrant status
+        shell: cmd
+
+      - name: Verify NGINX Deployment
+        run: curl -I http://192.168.56.10
+        shell: bash
