@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "Shivanirshankar/nginxserveronvirtualboxvm",
+  "pipelineDirectory": "nginxserveronvirtualboxvm",
+  "workspaceDirectory": "nginxserveronvirtualboxvm\\nginxserveronvirtualboxvm",
+  "repositories": {
+    "Shivanirshankar/nginxserveronvirtualboxvm": {
+      "repositoryPath": "nginxserveronvirtualboxvm\\nginxserveronvirtualboxvm",
+      "lastRunOn": "02/10/2025 15:32:16 +05:30"
+    }
+  },
+  "lastRunOn": "02/10/2025 15:32:16 +05:30"
+}

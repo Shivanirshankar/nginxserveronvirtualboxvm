@@ -1,15 +1,22 @@
 Vagrant.configure("2") do |config|
-    config.vm.box = "ubuntu/focal64" # Ubuntu 20.04
-    config.vm.network "private_network", type: "dhcp"
-    config.vm.provider "virtualbox" do |vb|
-      vb.memory = "1024"
-      vb.cpus = 2
-    end
-    config.vm.provision "shell", inline: <<-SHELL
-      sudo apt update -y
-      sudo apt install -y nginx
-      echo "<h1>Hello from Vagrant Nginx Server!</h1>" | sudo tee /var/www/html/index.html
-      sudo systemctl enable nginx
-      sudo systemctl start nginx
-    SHELL
-  end #webapp
+  config.vm.box = "ubuntu/focal64"
+
+  # Set a static IP instead of DHCP
+  config.vm.network "private_network", ip: "192.168.56.10"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
+    vb.cpus = 1
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get update
+    sudo apt-get install -y nginx
+    sudo systemctl enable nginx
+    sudo systemctl start nginx
+
+    echo "<h1>Welcome to NGINX running inside a VirtualBox VM</h1>" | sudo tee /var/www/html/index.html
+
+    sudo ufw allow 'Nginx HTTP'
+  SHELL
+end
