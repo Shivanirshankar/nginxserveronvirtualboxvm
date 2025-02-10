@@ -169,3 +169,58 @@
 [2025-02-10 10:05:52Z INFO JobNotification] Entering JobCompleted Notification
 [2025-02-10 10:05:52Z INFO JobNotification] Entering EndMonitor
 [2025-02-10 10:05:52Z INFO MessageListener] Received job status event. JobState: Online
+[2025-02-10 10:13:22Z INFO MessageListener] Message '861781649887348175' received from session '8602f43a-5ea8-423d-862d-dc6fcac42c93'.
+[2025-02-10 10:13:22Z INFO ConfigurationStore] HasCredentials()
+[2025-02-10 10:13:22Z INFO ConfigurationStore] stored True
+[2025-02-10 10:13:22Z INFO CredentialManager] GetCredentialProvider
+[2025-02-10 10:13:22Z INFO CredentialManager] Creating type OAuth
+[2025-02-10 10:13:22Z INFO CredentialManager] Creating credential type: OAuth
+[2025-02-10 10:13:22Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.credentials_rsaparams
+[2025-02-10 10:13:22Z INFO ActionsRunServer] EstablishVssConnection
+[2025-02-10 10:13:22Z INFO ActionsRunServer] Establish connection with 100 seconds timeout.
+[2025-02-10 10:13:22Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-02-10 10:13:22Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-02-10 10:13:23Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.credentials_rsaparams
+[2025-02-10 10:13:23Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.credentials_rsaparams
+[2025-02-10 10:13:24Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-02-10 10:13:24Z INFO JobDispatcher] Job request 12 for plan d7b630a6-36a3-4dc3-a94f-a6201aea3f61 job de432112-adb6-5ad5-3f3e-213de73019ca received.
+[2025-02-10 10:13:24Z INFO JobDispatcher] Pull OrchestrationId d7b630a6-36a3-4dc3-a94f-a6201aea3f61.deploy-nginx-vm.__default from JWT claims
+[2025-02-10 10:13:24Z INFO MessageListener] Received job status event. JobState: Busy
+[2025-02-10 10:13:24Z INFO MessageListener] _getMessagesTokenSource is already disposed.
+[2025-02-10 10:13:24Z INFO JobDispatcher] Job request de432112-adb6-5ad5-3f3e-213de73019ca processed succeed.
+[2025-02-10 10:13:24Z INFO Terminal] WRITE LINE: 2025-02-10 10:13:24Z: Running job: deploy-nginx-vm
+[2025-02-10 10:13:24Z INFO JobDispatcher] Start renew job request 12 for job de432112-adb6-5ad5-3f3e-213de73019ca.
+[2025-02-10 10:13:25Z INFO JobDispatcher] Successfully renew job request 12, job is valid till 10-02-2025 10:23:24
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin\Runner.Worker.exe'
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 1632 1480'
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2025-02-10 10:13:25Z INFO ProcessInvokerWrapper] Process started with process id 24880, waiting for process exit.
+[2025-02-10 10:13:25Z INFO JobDispatcher] Send job request message to worker for job de432112-adb6-5ad5-3f3e-213de73019ca.
+[2025-02-10 10:13:25Z INFO ProcessChannel] Sending message of length 25858, with hash '614bc38cbcc4319fbc956ba66ffafb2ea1bbc7f28ffde6834661b1c1c77c34b5'
+[2025-02-10 10:13:25Z INFO JobNotification] Entering JobStarted Notification
+[2025-02-10 10:13:25Z INFO JobNotification] Entering StartMonitor
+[2025-02-10 10:14:25Z INFO JobDispatcher] Successfully renew job request 12, job is valid till 10-02-2025 10:24:25
+[2025-02-10 10:15:25Z INFO JobDispatcher] Successfully renew job request 12, job is valid till 10-02-2025 10:25:25
+[2025-02-10 10:16:26Z INFO JobDispatcher] Successfully renew job request 12, job is valid till 10-02-2025 10:26:25
+[2025-02-10 10:17:26Z INFO JobDispatcher] Successfully renew job request 12, job is valid till 10-02-2025 10:27:25
+[2025-02-10 10:18:26Z INFO JobDispatcher] Successfully renew job request 12, job is valid till 10-02-2025 10:28:26
+[2025-02-10 10:19:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:20Z INFO ProcessInvokerWrapper] Finished process 24880 with exit code 102, and elapsed time 00:05:55.1825463.
+[2025-02-10 10:19:20Z INFO JobDispatcher] Worker finished for job de432112-adb6-5ad5-3f3e-213de73019ca. Code: 102
+[2025-02-10 10:19:20Z INFO JobDispatcher] finish job request for job de432112-adb6-5ad5-3f3e-213de73019ca with result: Failed
+[2025-02-10 10:19:20Z INFO Terminal] WRITE LINE: 2025-02-10 10:19:20Z: Job deploy-nginx-vm completed with result: Failed
+[2025-02-10 10:19:20Z INFO JobDispatcher] Stop renew job request for job de432112-adb6-5ad5-3f3e-213de73019ca.
+[2025-02-10 10:19:20Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 12.
+[2025-02-10 10:19:20Z INFO JobNotification] Entering JobCompleted Notification
+[2025-02-10 10:19:20Z INFO JobNotification] Entering EndMonitor
+[2025-02-10 10:19:20Z INFO MessageListener] Received job status event. JobState: Online

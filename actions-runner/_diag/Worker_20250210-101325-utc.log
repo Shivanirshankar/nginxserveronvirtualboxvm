@@ -1,0 +1,3630 @@
+[2025-02-10 10:13:25Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:25Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.credentials'
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:25Z INFO HostContext] Well known config file 'Runner': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.runner'
+[2025-02-10 10:13:25Z INFO Worker] Version: 2.322.0
+[2025-02-10 10:13:25Z INFO Worker] Commit: 0edc478ca75d0a753dcbcec7405f3f26db67b1ac
+[2025-02-10 10:13:25Z INFO Worker] Culture: en-IN
+[2025-02-10 10:13:25Z INFO Worker] UI Culture: en-US
+[2025-02-10 10:13:25Z INFO Worker] Waiting to receive the job message from the channel.
+[2025-02-10 10:13:25Z INFO ProcessChannel] Receiving message of length 25858, with hash '614bc38cbcc4319fbc956ba66ffafb2ea1bbc7f28ffde6834661b1c1c77c34b5'
+[2025-02-10 10:13:25Z INFO Worker] Message received.
+[2025-02-10 10:13:25Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/vm-setup.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v3",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 13,
+        "col": 15,
+        "lit": "Checkout Repository"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "fc85f9fc-dd81-5df6-66eb-3def0f3599d7",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 16,
+        "col": 15,
+        "lit": "Start Virtual Machine"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 17,
+              "col": 14,
+              "lit": "vagrant up"
+            }
+          },
+          {
+            "key": "shell",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 18,
+              "col": 16,
+              "lit": "cmd"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "c98438df-da21-563c-4258-4fb58dd5884c",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 20,
+        "col": 15,
+        "lit": "List Running VMs"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 21,
+              "col": 14,
+              "lit": "vagrant status"
+            }
+          },
+          {
+            "key": "shell",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 22,
+              "col": 16,
+              "lit": "cmd"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "0289e680-7838-5f22-3116-87a5a9208696",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 24,
+        "col": 15,
+        "lit": "Verify NGINX Deployment"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 25,
+              "col": 14,
+              "lit": "curl -I http://192.168.56.10"
+            }
+          },
+          {
+            "key": "shell",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 26,
+              "col": 16,
+              "lit": "bash"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "dbcb5686-aaf4-5a95-7d7d-d3a362b40ed2",
+      "name": "__run_3"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": ""
+    },
+    "system.pipelineStartTime": {
+      "value": "2025-02-10 10:13:21+00:00"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "12"
+    },
+    "build.containerId": {
+      "value": "26751296"
+    },
+    "build.allowCreateArtifacts": {
+      "value": "False"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/vm-setup.yml"
+    },
+    "system.phaseDisplayName": {
+      "value": "deploy-nginx-vm"
+    },
+    "system.phaseId": {
+      "value": "3ec8e61a-0eaa-58e7-c07b-ff076b4386d8"
+    },
+    "system.phaseName": {
+      "value": "deploy-nginx-vm"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "deploy-nginx-vm.__default"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "deploy-nginx-vm"
+    },
+    "system.jobDisplayName": {
+      "value": "deploy-nginx-vm"
+    },
+    "system.jobId": {
+      "value": "de432112-adb6-5ad5-3f3e-213de73019ca"
+    },
+    "system.jobName": {
+      "value": "__default"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "True"
+    },
+    "system.testDotNet8Compatibility": {
+      "value": "true"
+    },
+    "system.dotNet8CompatibilityOutputLength": {
+      "value": "200"
+    },
+    "system.dotNet8CompatibilityOutputPattern": {
+      "value": "GLIBCXX"
+    },
+    "system.dotNet8CompatibilityWarning": {
+      "value": "The Actions runner will no longer support your OS version on November 1, 2024. Please upgrade to a supported version. For information, refer https://github.blog/changelog/2024-08-19-notice-of-upcoming-deprecations-and-breaking-changes-in-github-actions-runners/"
+    },
+    "system.orchestrationId": {
+      "value": "d7b630a6-36a3-4dc3-a94f-a6201aea3f61.deploy-nginx-vm.__default"
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 41,
+    "planId": "d7b630a6-36a3-4dc3-a94f-a6201aea3f61",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/12",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "nginxserveronvirtualboxvm"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "Shivanirshankar"
+    }
+  },
+  "timeline": {
+    "id": "d7b630a6-36a3-4dc3-a94f-a6201aea3f61",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "de432112-adb6-5ad5-3f3e-213de73019ca",
+  "jobDisplayName": "deploy-nginx-vm",
+  "jobName": "__default",
+  "requestId": 12,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "790ad72a-70c9-43bd-85ac-b13749e701ab",
+          "ServerName": "jdYqh5grQ5yqqVdXHpEgOSXGBVDX4lo6IkrmrdjkCe1AsJZvZB",
+          "CacheServerUrl": "https://acghubeus1.actions.githubusercontent.com/jdYqh5grQ5yqqVdXHpEgOSXGBVDX4lo6IkrmrdjkCe1AsJZvZB/",
+          "FeedStreamUrl": "https://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "ConnectivityChecks": "[\"https://acghubeus0.actions.githubusercontent.com/_apis/health\",\"https://results-receiver.actions.githubusercontent.com/health\",\"https://pkg.actions.githubusercontent.com/health\",\"https://actions-results-receiver-production.githubapp.com/health\",\"https://pipelinesghubeus5.actions.githubusercontent.com/_apis/health\"]"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelinesghubeus5.actions.githubusercontent.com/jdYqh5grQ5yqqVdXHpEgOSXGBVDX4lo6IkrmrdjkCe1AsJZvZB/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "9a1e3997481d28051bff68417896b414e40bdab2"
+        },
+        {
+          "k": "repository",
+          "v": "Shivanirshankar/nginxserveronvirtualboxvm"
+        },
+        {
+          "k": "repository_owner",
+          "v": "Shivanirshankar"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "91555320"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/Shivanirshankar/nginxserveronvirtualboxvm.git"
+        },
+        {
+          "k": "run_id",
+          "v": "13238444442"
+        },
+        {
+          "k": "run_number",
+          "v": "4"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "repo-self-hosted-runners-disabled",
+          "v": false
+        },
+        {
+          "k": "enterprise-managed-business-id",
+          "v": ""
+        },
+        {
+          "k": "repository_id",
+          "v": "927011154"
+        },
+        {
+          "k": "actor_id",
+          "v": "91555320"
+        },
+        {
+          "k": "actor",
+          "v": "Shivanirshankar"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "Shivanirshankar"
+        },
+        {
+          "k": "workflow",
+          "v": "VirtualBox NGINX Deployment"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "9a1e3997481d28051bff68417896b414e40bdab2"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "db5cf845538ddc529876d17568f307ddcfb3f9ff"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "shivaniravishankar78@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Shivanirshankar"
+                              },
+                              {
+                                "k": "username",
+                                "v": "Shivanirshankar"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "shivaniravishankar78@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Shivanirshankar"
+                              },
+                              {
+                                "k": "username",
+                                "v": "Shivanirshankar"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "9a1e3997481d28051bff68417896b414e40bdab2"
+                        },
+                        {
+                          "k": "message",
+                          "v": "git runner"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2025-02-10T15:43:06+05:30"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "8e23dbdab3a5d9797b187dcea4a46b9766353c66"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/Shivanirshankar/nginxserveronvirtualboxvm/commit/9a1e3997481d28051bff68417896b414e40bdab2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/Shivanirshankar/nginxserveronvirtualboxvm/compare/db5cf845538d...9a1e3997481d"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "shivaniravishankar78@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Shivanirshankar"
+                          },
+                          {
+                            "k": "username",
+                            "v": "Shivanirshankar"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "shivaniravishankar78@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Shivanirshankar"
+                          },
+                          {
+                            "k": "username",
+                            "v": "Shivanirshankar"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "9a1e3997481d28051bff68417896b414e40bdab2"
+                    },
+                    {
+                      "k": "message",
+                      "v": "git runner"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2025-02-10T15:43:06+05:30"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "8e23dbdab3a5d9797b187dcea4a46b9766353c66"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/Shivanirshankar/nginxserveronvirtualboxvm/commit/9a1e3997481d28051bff68417896b414e40bdab2"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "91555320+Shivanirshankar@users.noreply.github.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "Shivanirshankar"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/Shivanirshankar/nginxserveronvirtualboxvm.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1738659139.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "Shivanirshankar/nginxserveronvirtualboxvm"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/Shivanirshankar/nginxserveronvirtualboxvm.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/Shivanirshankar/nginxserveronvirtualboxvm"
+                    },
+                    {
+                      "k": "id",
+                      "v": 927011154.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "nginxserveronvirtualboxvm"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDON0ERUg"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/91555320?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "91555320+Shivanirshankar@users.noreply.github.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/Shivanirshankar/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/Shivanirshankar/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/Shivanirshankar/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/Shivanirshankar/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/Shivanirshankar"
+                          },
+                          {
+                            "k": "id",
+                            "v": 91555320.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "Shivanirshankar"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Shivanirshankar"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOBXUF-A"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/Shivanirshankar/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/Shivanirshankar/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/Shivanirshankar/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/Shivanirshankar/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/Shivanirshankar/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/Shivanirshankar"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1739182397.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 5.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:Shivanirshankar/nginxserveronvirtualboxvm.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/Shivanirshankar/nginxserveronvirtualboxvm"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/Shivanirshankar/nginxserveronvirtualboxvm/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2025-02-10T10:02:12Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/Shivanirshankar/nginxserveronvirtualboxvm"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/91555320?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/Shivanirshankar/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/Shivanirshankar/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/Shivanirshankar/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/Shivanirshankar/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/Shivanirshankar"
+                    },
+                    {
+                      "k": "id",
+                      "v": 91555320.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "Shivanirshankar"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDOBXUF-A"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/Shivanirshankar/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/Shivanirshankar/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/Shivanirshankar/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/Shivanirshankar/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/Shivanirshankar/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/Shivanirshankar"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "workflow_ref",
+          "v": "Shivanirshankar/nginxserveronvirtualboxvm/.github/workflows/vm-setup.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "9a1e3997481d28051bff68417896b414e40bdab2"
+        }
+      ]
+    },
+    "run-feature-flags": {
+      "t": 2,
+      "d": [
+        {
+          "k": "actions_stream_logs_via_results_service",
+          "v": true
+        },
+        {
+          "k": "actions_use_results_service",
+          "v": true
+        },
+        {
+          "k": "actions_uses_cache_service_v2",
+          "v": false
+        },
+        {
+          "k": "block_artifacts_v3_exempted",
+          "v": false
+        },
+        {
+          "k": "larger_runners_custom_image_generation",
+          "v": false
+        }
+      ]
+    },
+    "partialrerun": false,
+    "needs": {
+      "t": 2
+    },
+    "vars": null,
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "EndpointsOverride": null
+  }
+}
+[2025-02-10 10:13:25Z INFO JobRunner] Job ID de432112-adb6-5ad5-3f3e-213de73019ca
+[2025-02-10 10:13:25Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin\Runner.Worker.dll
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:25Z INFO ConfigurationStore] binPath: C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:25Z INFO ConfigurationStore] RootFolder: C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:25Z INFO HostContext] Well known config file 'Runner': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.runner'
+[2025-02-10 10:13:25Z INFO ConfigurationStore] ConfigFilePath: C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.runner
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:25Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.credentials'
+[2025-02-10 10:13:25Z INFO ConfigurationStore] CredFilePath: C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.credentials
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:25Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.credentials_migrated'
+[2025-02-10 10:13:25Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.credentials_migrated
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:25Z INFO HostContext] Well known config file 'Service': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.service'
+[2025-02-10 10:13:25Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.service
+[2025-02-10 10:13:25Z INFO ConfigurationStore] Read setting file: 331 chars
+[2025-02-10 10:13:25Z INFO JobRunner] Creating job server with URL: https://pipelinesghubeus5.actions.githubusercontent.com/jdYqh5grQ5yqqVdXHpEgOSXGBVDX4lo6IkrmrdjkCe1AsJZvZB/
+[2025-02-10 10:13:25Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-02-10 10:13:25Z INFO Worker] Listening for cancel message from the channel.
+[2025-02-10 10:13:25Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2025-02-10 10:13:26Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-02-10 10:13:26Z INFO JobServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2025-02-10 10:13:26Z INFO JobServer] Attempting to start websocket client with delay 00:00:00.
+[2025-02-10 10:13:26Z INFO JobServerQueue] Initializing results client
+[2025-02-10 10:13:26Z INFO JobServerQueue] Start process web console line queue.
+[2025-02-10 10:13:26Z INFO JobServerQueue] Start process file upload queue.
+[2025-02-10 10:13:26Z INFO JobServerQueue] Start results file upload queue.
+[2025-02-10 10:13:26Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-02-10 10:13:26Z INFO JobServerQueue] Start process timeline update queue.
+[2025-02-10 10:13:26Z INFO ExecutionContext] Initialize GitHub context
+[2025-02-10 10:13:26Z INFO ExecutionContext] Initialize Env context
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:26Z INFO JobRunner] Starting the job execution context.
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:26Z INFO JobRunner] Validating directory permissions for: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Tools': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_tool'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:26Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:13:26Z INFO JobRunner] Getting job extension.
+[2025-02-10 10:13:27Z INFO JobRunner] Initialize job. Getting all job steps.
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.credentials'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\.setup_info'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:27Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_PipelineMapping\Shivanirshankar/nginxserveronvirtualboxvm\PipelineFolder.json
+[2025-02-10 10:13:27Z INFO PipelineDirectoryManager] Updating job run properties.
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:27Z INFO JobExtension] Downloading actions
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:27Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:13:27Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/f43a0e5ff2bd294095638e18286ca9a3d1956744' into C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions\_temp_726ff4aa-ebc4-4dc6-88d9-9578b8a87ab8\9d9cc1da-1d72-4ddf-bb39-684b9aea6ad0.zip.
+[2025-02-10 10:13:27Z INFO JobServer] Successfully started websocket client.
+[2025-02-10 10:13:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '65e7c519-873a-40a6-90f5-d4f42429c771', success rate: 1/1.
+[2025-02-10 10:13:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '65e7c519-873a-40a6-90f5-d4f42429c771', success rate: 1/1.
+[2025-02-10 10:13:28Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2025-02-10 10:13:30Z INFO ActionManager] Request URL: https://api.github.com/repos/actions/checkout/zipball/f43a0e5ff2bd294095638e18286ca9a3d1956744 X-GitHub-Request-Id: 6599:3F5CA4:E67809:12528F4:67A9D148 Http Status: OK
+[2025-02-10 10:13:31Z INFO ActionManager] Finished getting action repository.
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-02-10 10:13:31Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:13:31Z INFO ActionManager] Load action that reference repository from 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions\actions\checkout\v3'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-02-10 10:13:31Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-02-10 10:13:31Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-02-10 10:13:31Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-02-10 10:13:31Z INFO JobExtension] Adding .
+[2025-02-10 10:13:31Z INFO JobExtension] Adding .
+[2025-02-10 10:13:31Z INFO JobExtension] Adding .
+[2025-02-10 10:13:31Z INFO JobExtension] Adding .
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:31Z INFO JobExtension] Total accessible running process: 396.
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO JobExtension] Start checking server connectivity.
+[2025-02-10 10:13:31Z INFO JobExtension] Check server connectivity for https://acghubeus0.actions.githubusercontent.com/_apis/health.
+[2025-02-10 10:13:31Z INFO JobExtension] Check server connectivity for https://results-receiver.actions.githubusercontent.com/health.
+[2025-02-10 10:13:31Z INFO JobExtension] Check server connectivity for https://pkg.actions.githubusercontent.com/health.
+[2025-02-10 10:13:31Z INFO JobExtension] Check server connectivity for https://actions-results-receiver-production.githubapp.com/health.
+[2025-02-10 10:13:31Z INFO JobExtension] Check server connectivity for https://pipelinesghubeus5.actions.githubusercontent.com/_apis/health.
+[2025-02-10 10:13:31Z INFO JobExtension] Start checking service connectivity in background.
+[2025-02-10 10:13:31Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "65e7c519-873a-40a6-90f5-d4f42429c771",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 5,
+  "startTime": "2025-02-10T10:13:27.0066184Z",
+  "finishTime": "2025-02-10T10:13:31.1618638Z"
+}.
+[2025-02-10 10:13:31Z INFO JobRunner] Total job steps: 4.
+[2025-02-10 10:13:31Z INFO JobRunner] Run all job steps.
+[2025-02-10 10:13:31Z INFO StepsRunner] Processing step: DisplayName='Checkout Repository'
+[2025-02-10 10:13:31Z INFO StepsRunner] Evaluating: success()
+[2025-02-10 10:13:31Z INFO StepsRunner] Result: true
+[2025-02-10 10:13:31Z INFO StepsRunner] Starting the step.
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO StepsRunner] Which2: 'chcp'
+[2025-02-10 10:13:31Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper] Process started with process id 1292, waiting for process exit.
+[2025-02-10 10:13:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record '65e7c519-873a-40a6-90f5-d4f42429c771', success rate: 1/1.
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper] Finished process 1292 with exit code 0, and elapsed time 00:00:00.2146422.
+[2025-02-10 10:13:31Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:13:31Z INFO ActionManager] Load action that reference repository from 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions\actions\checkout\v3'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-02-10 10:13:31Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-02-10 10:13:31Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-02-10 10:13:31Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-02-10 10:13:31Z INFO ExecutionContext] Reserve record order 6 to 10 for post job actions.
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:13:31Z INFO ExecutionContext] Write event payload to C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:13:31Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "Shivanirshankar/nginxserveronvirtualboxvm"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "false"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "false"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "true"
+}
+[2025-02-10 10:13:31Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-02-10 10:13:31Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command error
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command group
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-02-10 10:13:31Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:31Z INFO HostContext] Well known directory 'Externals': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\externals'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\externals\node20\bin\node.exe'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\nginxserveronvirtualboxvm\nginxserveronvirtualboxvm'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-02-10 10:13:31Z INFO ProcessInvokerWrapper] Process started with process id 7820, waiting for process exit.
+[2025-02-10 10:13:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:31Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-02-10 10:13:31Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag\blocks\d7b630a6-36a3-4dc3-a94f-a6201aea3f61_65e7c519-873a-40a6-90f5-d4f42429c771.1
+[2025-02-10 10:13:32Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:32Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-02-10 10:13:32Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:33Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2025-02-10 10:13:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:33Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-02-10 10:13:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:35Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:36Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:13:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:13:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:13:54Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:13:54Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:14:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:14:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:04Z INFO JobServerQueue] Try to append 2 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 2/2.
+[2025-02-10 10:14:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:06Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:06Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper] Finished process 7820 with exit code 0, and elapsed time 00:00:36.8621413.
+[2025-02-10 10:14:08Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\_runner_file_commands\step_summary_5da9ecb9-b564-42ed-8ad9-41b8dcdb9e3a) is empty; skipping attachment upload
+[2025-02-10 10:14:08Z INFO StepsRunner] Step result: 
+[2025-02-10 10:14:08Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "fc85f9fc-dd81-5df6-66eb-3def0f3599d7",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 38,
+  "startTime": "2025-02-10T10:13:31.1701108Z",
+  "finishTime": "2025-02-10T10:14:08.360363Z"
+}.
+[2025-02-10 10:14:08Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-02-10 10:14:08Z INFO StepsRunner] Current state: job state = ''
+[2025-02-10 10:14:08Z INFO StepsRunner] Processing step: DisplayName='Start Virtual Machine'
+[2025-02-10 10:14:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fc85f9fc-dd81-5df6-66eb-3def0f3599d7', success rate: 1/1.
+[2025-02-10 10:14:08Z INFO StepsRunner] Evaluating: success()
+[2025-02-10 10:14:08Z INFO StepsRunner] Result: true
+[2025-02-10 10:14:08Z INFO StepsRunner] Starting the step.
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:08Z INFO StepsRunner] Which2: 'chcp'
+[2025-02-10 10:14:08Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper] Process started with process id 16872, waiting for process exit.
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper] Finished process 16872 with exit code 0, and elapsed time 00:00:00.1736063.
+[2025-02-10 10:14:08Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:14:08Z INFO ExecutionContext] Write event payload to C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:14:08Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-02-10 10:14:08Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command error
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command group
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-02-10 10:14:08Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-02-10 10:14:08Z INFO ScriptHandler] Which2: 'cmd'
+[2025-02-10 10:14:08Z INFO ScriptHandler] Location: 'C:\WINDOWS\system32\cmd.EXE'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:14:08Z INFO ScriptHandler] Which2: 'cmd'
+[2025-02-10 10:14:08Z INFO ScriptHandler] Location: 'C:\WINDOWS\system32\cmd.EXE'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\cmd.EXE'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Arguments: '/D /E:ON /V:OFF /S /C "CALL "C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\f178717b-f170-479f-997e-3eddbb97dea6.cmd""'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\nginxserveronvirtualboxvm\nginxserveronvirtualboxvm'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-02-10 10:14:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:14:08Z INFO ProcessInvokerWrapper] Process started with process id 34056, waiting for process exit.
+[2025-02-10 10:14:09Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-02-10 10:14:09Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag\blocks\d7b630a6-36a3-4dc3-a94f-a6201aea3f61_fc85f9fc-dd81-5df6-66eb-3def0f3599d7.1
+[2025-02-10 10:14:09Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-02-10 10:14:10Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-02-10 10:14:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:14:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:14:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:14:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:14:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:14:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:14:29Z INFO JobServerQueue] Stop aggressive process web console line queue.
+[2025-02-10 10:14:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:14:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:14:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:14:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:14:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:47Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:14:49Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:14:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:14:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:14:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:14:54Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:14:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:14:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:14:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:15:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:15:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:15:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:15:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:15:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:15:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:15:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:15:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:15:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:15:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:15:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:15:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:15:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:15:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:15:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:15:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:15:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:15:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:15:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:15:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:15:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:15:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:15:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:16:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:16:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:16:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:16:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:16:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:16:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:16:17Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:16:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:16:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:16:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:16:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:16:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:16:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:16:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:16:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:16:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:16:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:16:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:16:50Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:16:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:16:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:16:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:16:54Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:16:56Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:16:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:16:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:17:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:17:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:17:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:17:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:17:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:17:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:17:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:17:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:17:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:29Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:30Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:17:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:17:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:17:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:32Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:32Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:35Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:17:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:17:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:17:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:17:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:17:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:17:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:18:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:18:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:10Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:18:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:18:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:11Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:11Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:13Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:18:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:18:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:28Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:28Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:29Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:18:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:18:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper] Finished process 34056 with exit code 0, and elapsed time 00:04:29.6472417.
+[2025-02-10 10:18:38Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\_runner_file_commands\step_summary_a2e21931-3ea8-4d5d-a426-b1d1cd9579c3) is empty; skipping attachment upload
+[2025-02-10 10:18:38Z INFO StepsRunner] Step result: 
+[2025-02-10 10:18:38Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "cmd",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "c98438df-da21-563c-4258-4fb58dd5884c",
+  "stepContextName": "__run",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 270,
+  "startTime": "2025-02-10T10:14:08.3631745Z",
+  "finishTime": "2025-02-10T10:18:38.2523485Z"
+}.
+[2025-02-10 10:18:38Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-02-10 10:18:38Z INFO StepsRunner] Current state: job state = ''
+[2025-02-10 10:18:38Z INFO StepsRunner] Processing step: DisplayName='List Running VMs'
+[2025-02-10 10:18:38Z INFO StepsRunner] Evaluating: success()
+[2025-02-10 10:18:38Z INFO StepsRunner] Result: true
+[2025-02-10 10:18:38Z INFO StepsRunner] Starting the step.
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:38Z INFO StepsRunner] Which2: 'chcp'
+[2025-02-10 10:18:38Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper] Process started with process id 37948, waiting for process exit.
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper] Finished process 37948 with exit code 0, and elapsed time 00:00:00.1819851.
+[2025-02-10 10:18:38Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:18:38Z INFO ExecutionContext] Write event payload to C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:18:38Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-02-10 10:18:38Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command error
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command group
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-02-10 10:18:38Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-02-10 10:18:38Z INFO ScriptHandler] Which2: 'cmd'
+[2025-02-10 10:18:38Z INFO ScriptHandler] Location: 'C:\WINDOWS\system32\cmd.EXE'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:38Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:18:38Z INFO ScriptHandler] Which2: 'cmd'
+[2025-02-10 10:18:38Z INFO ScriptHandler] Location: 'C:\WINDOWS\system32\cmd.EXE'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\cmd.EXE'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Arguments: '/D /E:ON /V:OFF /S /C "CALL "C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\885bf8ae-c0ef-4abb-ae8c-4b1c9aae5115.cmd""'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\nginxserveronvirtualboxvm\nginxserveronvirtualboxvm'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-02-10 10:18:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c98438df-da21-563c-4258-4fb58dd5884c', success rate: 1/1.
+[2025-02-10 10:18:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0289e680-7838-5f22-3116-87a5a9208696', success rate: 1/1.
+[2025-02-10 10:18:38Z INFO ProcessInvokerWrapper] Process started with process id 14900, waiting for process exit.
+[2025-02-10 10:18:38Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-02-10 10:18:38Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag\blocks\d7b630a6-36a3-4dc3-a94f-a6201aea3f61_c98438df-da21-563c-4258-4fb58dd5884c.1
+[2025-02-10 10:18:40Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-02-10 10:18:41Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-02-10 10:18:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:18:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:18:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:18:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:18:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:18:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper] Finished process 14900 with exit code 0, and elapsed time 00:00:21.8164144.
+[2025-02-10 10:19:00Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\_runner_file_commands\step_summary_4404ba32-adf0-4a1e-9298-a6a9df8db331) is empty; skipping attachment upload
+[2025-02-10 10:19:00Z INFO StepsRunner] Step result: 
+[2025-02-10 10:19:00Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "cmd",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "0289e680-7838-5f22-3116-87a5a9208696",
+  "stepContextName": "__run_2",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 23,
+  "startTime": "2025-02-10T10:18:38.2532128Z",
+  "finishTime": "2025-02-10T10:19:00.3102649Z"
+}.
+[2025-02-10 10:19:00Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-02-10 10:19:00Z INFO StepsRunner] Current state: job state = ''
+[2025-02-10 10:19:00Z INFO StepsRunner] Processing step: DisplayName='Verify NGINX Deployment'
+[2025-02-10 10:19:00Z INFO StepsRunner] Evaluating: success()
+[2025-02-10 10:19:00Z INFO StepsRunner] Result: true
+[2025-02-10 10:19:00Z INFO StepsRunner] Starting the step.
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:00Z INFO StepsRunner] Which2: 'chcp'
+[2025-02-10 10:19:00Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper] Process started with process id 42556, waiting for process exit.
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper] Finished process 42556 with exit code 0, and elapsed time 00:00:00.1369943.
+[2025-02-10 10:19:00Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:19:00Z INFO ExecutionContext] Write event payload to C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:19:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-02-10 10:19:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command error
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command group
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-02-10 10:19:00Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-02-10 10:19:00Z INFO ScriptHandler] Which2: 'bash'
+[2025-02-10 10:19:00Z INFO ScriptHandler] Location: 'C:\WINDOWS\system32\bash.EXE'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:19:00Z INFO ScriptHandler] Which2: 'bash'
+[2025-02-10 10:19:00Z INFO ScriptHandler] Location: 'C:\WINDOWS\system32\bash.EXE'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\bash.EXE'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Arguments: '--noprofile --norc -e -o pipefail C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\16d9ce4a-fe2d-4d57-a08b-00b6fe6c8c20.sh'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\nginxserveronvirtualboxvm\nginxserveronvirtualboxvm'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-02-10 10:19:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0289e680-7838-5f22-3116-87a5a9208696', success rate: 1/1.
+[2025-02-10 10:19:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'dbcb5686-aaf4-5a95-7d7d-d3a362b40ed2', success rate: 1/1.
+[2025-02-10 10:19:00Z INFO ProcessInvokerWrapper] Process started with process id 3472, waiting for process exit.
+[2025-02-10 10:19:01Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-02-10 10:19:01Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag\blocks\d7b630a6-36a3-4dc3-a94f-a6201aea3f61_0289e680-7838-5f22-3116-87a5a9208696.1
+[2025-02-10 10:19:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:01Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper] Finished process 3472 with exit code 1, and elapsed time 00:00:03.3637155.
+[2025-02-10 10:19:03Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\_runner_file_commands\step_summary_bc0c4577-0b14-436d-b60b-188f5c6aba24) is empty; skipping attachment upload
+[2025-02-10 10:19:03Z INFO StepsRunner] Step result: Failed
+[2025-02-10 10:19:03Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "bash",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "dbcb5686-aaf4-5a95-7d7d-d3a362b40ed2",
+  "stepContextName": "__run_3",
+  "result": "failed",
+  "errorMessages": [
+    "Process completed with exit code 1."
+  ],
+  "executionTimeInSeconds": 4,
+  "startTime": "2025-02-10T10:19:00.311553Z",
+  "finishTime": "2025-02-10T10:19:03.8620234Z"
+}.
+[2025-02-10 10:19:03Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2025-02-10 10:19:03Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-02-10 10:19:03Z INFO StepsRunner] Processing step: DisplayName='Post Checkout Repository'
+[2025-02-10 10:19:03Z INFO StepsRunner] Evaluating: always()
+[2025-02-10 10:19:03Z INFO StepsRunner] Result: true
+[2025-02-10 10:19:03Z INFO StepsRunner] Starting the step.
+[2025-02-10 10:19:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:03Z INFO StepsRunner] Which2: 'chcp'
+[2025-02-10 10:19:03Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:19:03Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-02-10 10:19:03Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-02-10 10:19:03Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag\blocks\d7b630a6-36a3-4dc3-a94f-a6201aea3f61_dbcb5686-aaf4-5a95-7d7d-d3a362b40ed2.1
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper] Process started with process id 21092, waiting for process exit.
+[2025-02-10 10:19:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'dbcb5686-aaf4-5a95-7d7d-d3a362b40ed2', success rate: 1/1.
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper] Finished process 21092 with exit code 0, and elapsed time 00:00:00.1682731.
+[2025-02-10 10:19:04Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:19:04Z INFO ActionManager] Load action that reference repository from 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions\actions\checkout\v3'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Actions': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions'
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-02-10 10:19:04Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-02-10 10:19:04Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-02-10 10:19:04Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:19:04Z INFO ExecutionContext] Write event payload to C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Temp': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp'
+[2025-02-10 10:19:04Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "Shivanirshankar/nginxserveronvirtualboxvm"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "false"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "false"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "true"
+}
+[2025-02-10 10:19:04Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-02-10 10:19:04Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command error
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command group
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-02-10 10:19:04Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:04Z INFO HostContext] Well known directory 'Externals': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\externals'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper] Starting process:
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\externals\node20\bin\node.exe'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\nginxserveronvirtualboxvm\nginxserveronvirtualboxvm'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-02-10 10:19:04Z INFO ProcessInvokerWrapper] Process started with process id 39464, waiting for process exit.
+[2025-02-10 10:19:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9d973054-ae92-4259-9969-0a18c4fc7ccd', success rate: 1/1.
+[2025-02-10 10:19:04Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-02-10 10:19:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9d973054-ae92-4259-9969-0a18c4fc7ccd', success rate: 1/1.
+[2025-02-10 10:19:05Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2025-02-10 10:19:06Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9d973054-ae92-4259-9969-0a18c4fc7ccd', success rate: 1/1.
+[2025-02-10 10:19:06Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9d973054-ae92-4259-9969-0a18c4fc7ccd', success rate: 1/1.
+[2025-02-10 10:19:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9d973054-ae92-4259-9969-0a18c4fc7ccd', success rate: 1/1.
+[2025-02-10 10:19:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work'
+[2025-02-10 10:19:11Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-02-10 10:19:13Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-02-10 10:19:13Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:13Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-02-10 10:19:13Z INFO ProcessInvokerWrapper] Finished process 39464 with exit code 0, and elapsed time 00:00:09.8238336.
+[2025-02-10 10:19:13Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp\_runner_file_commands\step_summary_d4efccbc-716d-455d-80ee-fd7bc33d8563) is empty; skipping attachment upload
+[2025-02-10 10:19:13Z INFO StepsRunner] Step result: 
+[2025-02-10 10:19:13Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node20",
+  "stage": "Post",
+  "stepId": "9d973054-ae92-4259-9969-0a18c4fc7ccd",
+  "result": "succeeded",
+  "errorMessages": [
+    "The process 'C:\\Users\\ShivaniRShankar\\AppData\\Local\\Programs\\Git\\cmd\\git.exe' failed with exit code 128"
+  ],
+  "executionTimeInSeconds": 11,
+  "startTime": "2025-02-10T10:19:03.8690549Z",
+  "finishTime": "2025-02-10T10:19:13.9026408Z"
+}.
+[2025-02-10 10:19:13Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-02-10 10:19:13Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-02-10 10:19:13Z INFO JobRunner] Finalize job.
+[2025-02-10 10:19:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:13Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:19:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:13Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:19:13Z INFO JobExtension] Initialize Env context
+[2025-02-10 10:19:13Z INFO JobExtension] Initialize steps context
+[2025-02-10 10:19:13Z INFO JobExtension] Total accessible running process: 415.
+[2025-02-10 10:19:13Z INFO JobExtension] Inspecting process environment variables. PID: 46732 (SearchProtocolHost)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 45060 (svchost)
+[2025-02-10 10:19:14Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2025-02-10 10:19:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9d973054-ae92-4259-9969-0a18c4fc7ccd', success rate: 1/1.
+[2025-02-10 10:19:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record '80185bf6-e1a4-448a-a01e-3a710fcc40cc', success rate: 1/1.
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 23976 (audiodg)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 34004 (SenseNdr)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 23560 (VBoxHeadless)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 16120 (conhost)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 24480 (VBoxHeadless)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 51328 (VBoxHeadless)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 32412 (VBoxNetDHCP)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 22252 (VBoxNetDHCP)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 5536 (msedgewebview2)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 34280 (VBoxNetDHCP)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 46620 (WmiApSrv)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 48276 (svchost)
+[2025-02-10 10:19:14Z WARN JobExtension] Ignore exception during read process environment variables: Cannot process request because the process (48276) has exited.
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 24508 (vmwp)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 35936 (vmmemWSL)
+[2025-02-10 10:19:14Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 25244 (dllhost)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 37312 (dllhost)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 28584 (wslrelay)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 10408 (wslhost)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 46360 (wslhost)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 23700 (conhost)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 29880 (conhost)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 44836 (msrdc)
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 15436 (elliptic_service_daemon)
+[2025-02-10 10:19:14Z WARN JobExtension] Ignore exception during read process environment variables: Cannot process request because the process (15436) has exited.
+[2025-02-10 10:19:14Z INFO JobExtension] Inspecting process environment variables. PID: 22072 (conhost)
+[2025-02-10 10:19:14Z WARN JobExtension] Ignore exception during read process environment variables: Cannot process request because the process (22072) has exited.
+[2025-02-10 10:19:14Z INFO JobExtension] Wait for all connectivity checks to finish.
+[2025-02-10 10:19:14Z INFO JobExtension] Connectivity check result: GitHub.Runner.Worker.JobExtension+CheckResult
+[2025-02-10 10:19:14Z INFO JobExtension] Connectivity check result: GitHub.Runner.Worker.JobExtension+CheckResult
+[2025-02-10 10:19:14Z INFO JobExtension] Connectivity check result: GitHub.Runner.Worker.JobExtension+CheckResult
+[2025-02-10 10:19:14Z INFO JobExtension] Connectivity check result: GitHub.Runner.Worker.JobExtension+CheckResult
+[2025-02-10 10:19:14Z INFO JobExtension] Connectivity check result: GitHub.Runner.Worker.JobExtension+CheckResult
+[2025-02-10 10:19:14Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "80185bf6-e1a4-448a-a01e-3a710fcc40cc",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-02-10T10:19:13.9162838Z",
+  "finishTime": "2025-02-10T10:19:14.4785697Z"
+}.
+[2025-02-10 10:19:14Z INFO JobRunner] Job result after all job steps finish: Failed
+[2025-02-10 10:19:14Z INFO JobRunner] Completing the job execution context.
+[2025-02-10 10:19:14Z INFO JobRunner] Shutting down the job server queue.
+[2025-02-10 10:19:14Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2025-02-10 10:19:14Z INFO JobServerQueue] All queue process task stopped.
+[2025-02-10 10:19:14Z INFO JobServerQueue] Web console line queue drained.
+[2025-02-10 10:19:14Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2025-02-10 10:19:17Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2025-02-10 10:19:17Z INFO JobServerQueue] File upload queue drained.
+[2025-02-10 10:19:17Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-02-10 10:19:17Z INFO JobServerQueue] Uploading 3 file(s) in one shot through results service.
+[2025-02-10 10:19:17Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-02-10 10:19:17Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag\blocks\d7b630a6-36a3-4dc3-a94f-a6201aea3f61_9d973054-ae92-4259-9969-0a18c4fc7ccd.1
+[2025-02-10 10:19:17Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-02-10 10:19:17Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag\blocks\d7b630a6-36a3-4dc3-a94f-a6201aea3f61_80185bf6-e1a4-448a-a01e-3a710fcc40cc.1
+[2025-02-10 10:19:18Z INFO JobServerQueue] Got a job log file to send to results service.
+[2025-02-10 10:19:18Z INFO JobServerQueue] Starting upload of job log file to results service ResultsLog, C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag\blocks\d7b630a6-36a3-4dc3-a94f-a6201aea3f61_de432112-adb6-5ad5-3f3e-213de73019ca.1
+[2025-02-10 10:19:19Z INFO JobServerQueue] Tried to upload 3 file(s) to results, success rate: 3/3.
+[2025-02-10 10:19:19Z INFO JobServerQueue] Results upload queue drained.
+[2025-02-10 10:19:20Z INFO JobServerQueue] Timeline update queue drained.
+[2025-02-10 10:19:20Z INFO JobServerQueue] Disposing job server ...
+[2025-02-10 10:19:20Z INFO JobServerQueue] Disposing results server ...
+[2025-02-10 10:19:20Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2025-02-10 10:19:20Z INFO JobServerQueue] Actions upload time: 15862 ms, Result upload time: 9393 ms
+[2025-02-10 10:19:20Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_work\_temp
+[2025-02-10 10:19:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\bin'
+[2025-02-10 10:19:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner'
+[2025-02-10 10:19:20Z INFO HostContext] Well known directory 'Diag': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag'
+[2025-02-10 10:19:20Z INFO HostContext] Well known config file 'Telemetry': 'C:\Users\ShivaniRShankar\Downloads\Virtualbox-demo\webapp\actions-runner\_diag\.telemetry'
+[2025-02-10 10:19:20Z INFO JobRunner] Raising job completed event
+[2025-02-10 10:19:20Z INFO Worker] Job completed.

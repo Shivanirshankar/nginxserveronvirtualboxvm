@@ -15,12 +15,12 @@ jobs:
 
       - name: Start Virtual Machine
         run: vagrant up
-        shell: cmd  # Run in Windows CMD to avoid PowerShell script issues
+        shell: cmd  # Run in Windows CMD
 
-      - name: List Running VMs #list vm's
+      - name: List Running VMs
         run: vagrant status
         shell: cmd
 
       - name: Verify NGINX Deployment
         run: curl -I http://192.168.56.10
-        shell: bash
+        shell: cmd  # Run curl in Windows CMD instead of Bash
